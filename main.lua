@@ -5,18 +5,6 @@ function love.load()
     player.speed = 200
 end
 
-function love.keypressed(key)
-    if key == "w" then
-        player.y = player.y - 10
-    elseif key == "s" then
-        player.y = player.y + 10
-    elseif key == "a" then
-        player.x = player.x - 10
-    elseif key == "d" then
-        player.x = player.x + 10
-    end
-end
-
 function love.update(dt)
     if love.keyboard.isDown("w") then
         player.y = player.y - player.speed * dt
